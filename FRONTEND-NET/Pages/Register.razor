@@ -1,0 +1,190 @@
+@page "/register"
+@inject NavigationManager NavigationManager
+@using System.Text.Json;
+@inject HttpClient HttpClient
+@using System.Text
+@inject IJSRuntime JSRuntime
+
+<PageTitle>Login</PageTitle>
+<html lang="en">
+  <head>
+  	<title>Login 10</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body class="img js-fullheight" style="background-image: url(images/bg.jpg);">
+
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Register</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+		      	<h3 class="mb-4 text-center">Enter your information</h3>
+		      	<form class="signin-form" @onsubmit="Registrarse">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Name" required @bind="nuevoUsuario.Nombres">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name" required @bind="nuevoUsuario.Apellidos">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Phone" required @bind="nuevoUsuario.Telefono">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email" required @bind="nuevoUsuario.Email">
+                    </div>
+                    <div class="form-group">
+                    <input id="password-field" type="password" class="form-control" placeholder="Password" required @bind="nuevoUsuario.Contraseña">
+                    <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="form-control btn submit px-3" style="background-color: #EC20D3">Register</button>
+                    </div>
+                </form>
+
+	          <p class="w-100 text-center">&mdash; Already have an account? &mdash;</p>
+	          <div class="social d-flex text-center">
+	          	<a href="/login" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Click here to sign in</a>
+	          </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+	</body>
+</html>
+
+@code {
+    private Usuario nuevoUsuario = new Usuario(); // Crear una instancia del modelo Usuario para almacenar los datos del formulario
+    private string mensaje = ""; // Variable para mostrar mensajes al usuario
+
+    // Método para enviar los datos del formulario al servidor
+    // Método para obtener el ID máximo
+    // Método para obtener el ID máximo
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await CookieService.RedirectToHomeIfCookieExists(JSRuntime);
+            StateHasChanged();
+        }
+    }
+    private async Task<int> ObtenerIdMaximo()
+    {
+        try
+        {
+            var client = new HttpClient();
+            var response = await client.GetAsync("http://localhost:5086/api/usuarios/maxid");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                using (JsonDocument doc = JsonDocument.Parse(json))
+                {
+                    if (doc.RootElement.TryGetProperty("id", out var idElement) && idElement.ValueKind == JsonValueKind.Number)
+                    {
+                        return idElement.GetInt32();
+                    }
+                }
+            }            
+
+            // Manejo de errores: devuelve un valor predeterminado (por ejemplo, 1) si la solicitud falla
+            return 1;
+        }
+        catch (Exception ex)
+        {
+            // Manejo de excepciones: devuelve un valor predeterminado (por ejemplo, 1) en caso de error
+            return 1;
+        }
+    }
+
+
+// Método para registrar un nuevo usuario
+    private async Task Registrarse()
+    {
+        Console.WriteLine("Registrarse se ha llamado.");
+        int idMaximo = await ObtenerIdMaximo();
+        nuevoUsuario.Id = idMaximo + 1; // Asigna un nuevo ID basado en el máximo actual
+        nuevoUsuario.Rol = "Cliente";
+
+        // Serializar el objeto a JSON
+        string jsonUsuario = JsonSerializer.Serialize(nuevoUsuario);
+        Console.WriteLine("JSON del nuevo usuario: " + jsonUsuario);
+
+        try
+        {
+            var client = new HttpClient();
+            var response = await client.PostAsJsonAsync("http://localhost:5086/api/usuarios", nuevoUsuario);
+            
+            if (response.IsSuccessStatusCode)
+            {
+                mensaje = "Registro exitoso";
+                NavigationManager.NavigateTo("/login");
+            }
+
+            else
+            {
+                var content = await response.Content.ReadAsStringAsync();
+
+                if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+                {
+                    var confirm = await JSRuntime.InvokeAsync<bool>("confirm", "El email ya está en uso. Por favor, elige otro email.");
+                    if (confirm){
+                        
+                    }
+                    // Aquí puedes mostrar un mensaje al usuario o realizar otras acciones
+                }
+                
+                if (content.Contains("Acceso denegado."))
+                {
+                    mensaje = "Inicio de sesión fallido: Acceso denegado. Verifica tus credenciales.";
+                }
+                else
+                {
+                    mensaje = "Error desconocido durante el inicio de sesión. Verifica tus credenciales.";
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            mensaje = "Error en el registro: " + ex.Message;
+            Console.WriteLine("Excepción: " + ex.Message);
+        }
+
+    }
+
+    public class Usuario
+    {
+        public int Id { get; set; }
+        public string Nombres { get; set; }
+        public string Apellidos { get; set; }
+        public string Telefono { get; set; }
+        public string Email { get; set; }
+        public string Contraseña { get; set; }
+        public string Rol { get; set; }
+    }
+
+    public class MaxIdResponse
+    {
+        public int Id { get; set; }
+    }
+}

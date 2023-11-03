@@ -1,0 +1,263 @@
+@page "/user"
+@inject IJSRuntime JSRuntime
+@inject CookieService CookieService
+@using System.Text.Json
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Grayscale - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets-main/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css-main/styles.css" rel="stylesheet" />
+    </head>
+<body id="page-top" style="margin: 0;">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand text-black" href="/">Regresar</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link text-black" style="font-weight: bold;" href="javascript:void(0);" @onclick="CerrarSesion">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <header class="masthead">
+        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+            <div class="d-flex justify-content-center">
+                <div class="text-center">
+                    <div class="d-flex justify-content-center align-items-center" style="height: 35vh;">
+                        <div class="rounded-circle" style="width: 150px; height: 150px; overflow: hidden;">
+                            <div class="image-container" @onmouseover="ShowEditMessage" @onmouseout="HideEditMessage">
+                                <InputFile multiple style="display: none" id="fileInput" OnChange="HandleFileUpload" />
+                                <img src="data:image/jpeg;base64,@imagen" alt="Imagen del usuario" class="w-100 h-100" />
+
+                                @if (showEditMessage)
+                                {
+                                    <label for="fileInput" class="edit-message">
+                                        Editar imagen
+                                    </label>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <h2 class="text-white-50 mx-auto mt-2 mb-2">Datos personales:</h2>
+                        <form @onsubmit="ActualizarDatos">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="campo1" class="text-white-50 mx-auto mt-2 mb-2">Nombres:</label>
+                                        <input type="text" class="form-control" id="campo1" placeholder="Campo 1" @bind="nombres" style="background-color: transparent; border-color: #313131; color: #A9A9A9;" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="campo2" class="text-white-50 mx-auto mt-2 mb-2">Teléfono:</label>
+                                        <input type="text" class="form-control" id="campo2" placeholder="Campo 2" @bind="telefono" style="background-color: transparent; border-color: #313131; color: #A9A9A9;" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="campo3" class="text-white-50 mx-auto mt-2 mb-2">Apellidos;</label>
+                                        <input type="text" class="form-control" id="campo3" placeholder="Campo 3" @bind="apellidos" style="background-color: transparent; border-color: #313131; color: #A9A9A9;" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="campo4" class="text-white-50 mx-auto mt-2 mb-2">Rol:</label>
+                                        <select class="form-control" id="campo4" @bind="rol" style="background-color: transparent; border-color: #313131; color: #A9A9A9;">
+                                            <option value="Cliente">Cliente</option>
+                                            <option value="Vendedor">Vendedor</option>
+                                        </select>
+                                    </div>
+
+
+                                    
+                                    
+                                </div>     
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-4 mx-auto d-block" href="#about">Actualizar</button>
+                        </form>
+                    </div>
+
+
+</div>
+    
+                </div>
+            </div>
+        
+    </header>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js-main/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+    <style>
+    .image-container {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        transition: filter 0.2s; /* Transición de filtro para el efecto de sombra */
+    }
+
+    .image-container:hover img {
+        filter: brightness(85%); /* Cambia el brillo al pasar el mouse sobre la imagen */
+    }
+
+    .edit-message {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centra el mensaje en el contenedor */
+        background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+    }
+</style>
+</html>
+
+@code{
+    private int? cookieValue;
+    private string comp;
+    private string userJson;
+    private string errorMessage;
+    private string nombres;
+    private string apellidos;
+    private string telefono;
+    private string rol;
+    private string email;
+    private bool showEditMessage = false;
+    private string imagen = "";
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            comp = await CookieService.ReadCookieValue(JSRuntime);
+            cookieValue = await CookieService.ReadUserCookie(JSRuntime);
+            await AsignInformation();
+            StateHasChanged();
+        }
+        
+    }
+    public async Task AsignInformation(){
+        if (cookieValue.HasValue)
+        {
+            try
+            {
+                // Aquí haces la llamada a tu API para obtener los datos del usuario
+                var client = new HttpClient();
+                var response = await client.GetAsync($"http://localhost:5086/api/usuarios/{cookieValue}");
+                
+                if (response.IsSuccessStatusCode)
+                {
+                    // Si la llamada es exitosa, obtén el JSON de respuesta como una cadena
+                    userJson = await response.Content.ReadAsStringAsync();
+                    dynamic user = JsonSerializer.Deserialize<dynamic>(userJson);
+                    nombres = user.GetProperty("nombres").GetString();
+                    apellidos = user.GetProperty("apellidos").GetString();
+                    telefono = user.GetProperty("telefono").GetString();
+                    telefono = user.GetProperty("telefono").GetString();
+                    email = user.GetProperty("email").GetString();
+                    imagen = user.GetProperty("imagen").GetString();
+                    rol = user.GetProperty("rol").GetString();
+                }
+                else
+                {
+                    errorMessage = "No se pudieron obtener los datos del usuario.";
+                }
+            }
+            catch (Exception ex)
+            {
+                errorMessage = "Error al obtener los datos del usuario: " + ex.Message;
+            }
+        }
+    }
+    private void ShowEditMessage()
+    {
+        showEditMessage = true;
+    }
+
+    private void HideEditMessage()
+    {
+        showEditMessage = false;
+    }
+
+    private async Task ActualizarDatos()
+    {
+        int id = cookieValue ?? 0;
+
+        // Crea un objeto con los datos a actualizar
+        var datosActualizados = new {
+            id = cookieValue,
+            nombres = nombres,
+            telefono = telefono,
+            apellidos = apellidos,
+            rol = rol,
+            email = email,
+            imagen = imagen
+        };
+
+        var client = new HttpClient();
+        Console.WriteLine(datosActualizados);
+        var response = await client.PutAsJsonAsync($"http://localhost:5086/api/usuarios/{cookieValue}/2", datosActualizados);
+
+        if (response.IsSuccessStatusCode)
+        {
+            // Actualización exitosa, realiza cualquier acción adicional necesaria
+            Console.WriteLine("Datos actualizados exitosamente.");
+        }
+        else
+        {
+            // Maneja el error en caso de una actualización fallida
+            Console.WriteLine("Error al actualizar los datos.");
+        }
+    }
+    private const int tamaño = 2 * 1024 * 1024;
+    private List<string> imagenes = new List<string>();
+    private async Task HandleFileUpload(InputFileChangeEventArgs e)
+    {
+        var archivo = e.GetMultipleFiles().FirstOrDefault(); // Obtén el primer archivo seleccionado
+
+        if (archivo != null)
+        {
+            using var stream = archivo.OpenReadStream(tamaño);
+            using var ms = new MemoryStream();
+            await stream.CopyToAsync(ms);
+            imagen = $"{Convert.ToBase64String(ms.ToArray())}";
+            
+        }
+    }
+    private async Task CerrarSesion(){
+        var confirm = await JSRuntime.InvokeAsync<bool>("confirm", "Esta a punto de cerrar sesión, ¿Desea continuar?");
+        if (confirm){
+            var jsEliminarEmail = "document.cookie = 'email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';";
+            var jsEliminarUser = "document.cookie = 'user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';";
+
+            await JSRuntime.InvokeVoidAsync("eval", jsEliminarEmail);
+            await JSRuntime.InvokeVoidAsync("eval", jsEliminarUser);
+
+            // Redirigir a la página de inicio de sesión (login)
+            await JSRuntime.InvokeVoidAsync("eval", "window.location.href = '/login'");
+        }  
+    }
+}
+    

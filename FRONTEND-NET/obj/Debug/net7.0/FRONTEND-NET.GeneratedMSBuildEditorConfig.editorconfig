@@ -1,0 +1,101 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = FRONTEND_NET
+build_property.RootNamespace = FRONTEND_NET
+build_property.ProjectDir = C:\Users\USER\Desktop\Proyecto-NET\FRONTEND-NET\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\USER\Desktop\Proyecto-NET\FRONTEND-NET
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/Pages/AdminProductos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5Qcm9kdWN0b3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/Pages/FormProduct.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybVByb2R1Y3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/Pages/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/Pages/User.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/Shared/ComponenteDesplegable.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudGVEZXNwbGVnYWJsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/Shared/Contact.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbnRhY3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/Shared/Header.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEhlYWRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/Shared/NavBar.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdkJhci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/Shared/Projects.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFByb2plY3RzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/Shared/SignUp.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNpZ25VcC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-84qd5596i1
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-0xgt5p8g62
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Proyecto-NET/FRONTEND-NET/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

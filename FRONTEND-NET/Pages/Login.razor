@@ -1,0 +1,128 @@
+@page "/login"
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JSRuntime
+@using System.Text.Json
+
+<PageTitle>Login</PageTitle>
+<html lang="en">
+  <head>
+  	<title>Login 10</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body class="img js-fullheight" style="background-image: url(images/bg.jpg);">
+
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Sing In</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+		      	<h3 class="mb-4 text-center">Enter your email and password</h3>
+		      	<form class="signin-form" @onsubmit="IniciarSesion">
+		      		<div class="form-group">
+		      			<input type="text" class="form-control" placeholder="Email" required @bind="email">
+		      		</div>
+	            <div class="form-group">
+	              <input id="password-field" type="password" class="form-control" placeholder="Password" required @bind="password">
+	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+	            </div>
+	            <div class="form-group">
+	            	<button type="submit" class="form-control btn submit px-3" style="background-color: #EC20D3">Sign In</button>
+	            </div>
+
+	          </form>
+	          <p class="w-100 text-center">&mdash; Don't have an account? &mdash;</p>
+	          <div class="social d-flex text-center">
+	          	<a href="/register" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Click here to register</a>
+	          </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+	</body>
+</html>
+
+@code {
+    private string email = "";
+    private string password = "";
+    private string mensaje;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await CookieService.RedirectToHomeIfCookieExists(JSRuntime);
+            StateHasChanged();
+        }
+    }
+
+    private async Task IniciarSesion()
+    {
+        try
+        {
+            var client = new HttpClient();
+            var loginRequest = new
+            {
+                email = email,
+                contraseña = password
+            };
+
+            var response = await client.PostAsJsonAsync("http://localhost:5086/api/usuarios/login", loginRequest);
+            Console.WriteLine(response);
+            if (response.IsSuccessStatusCode)
+            {
+                var confirm = await JSRuntime.InvokeAsync<bool>("confirm", "Inicio de sesión exitoso. ¿Deseas continuar?");
+                
+                if (confirm)
+                {
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    var responseJson = JsonSerializer.Deserialize<Dictionary<string, object>>(responseContent);
+                    var userId = responseJson["userId"];
+                    Console.WriteLine($"User {userId} email {email}");
+                    var js = $"document.cookie = 'email={email}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';";
+                    var js2 = $"document.cookie = 'user={userId}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';";
+                    await JSRuntime.InvokeVoidAsync("eval", js);
+                    await JSRuntime.InvokeVoidAsync("eval", js2);
+                    // Redirige al usuario a la página de inicio o a donde desees
+                    await JSRuntime.InvokeVoidAsync("eval", "window.location.href = '/'");
+                }
+
+            }
+
+
+            else if((int)response.StatusCode == 401){
+
+                mensaje = "Inicio de sesión fallido. Verifica tus credenciales.";
+
+                // Mostrar una alerta del navegador
+                await JSRuntime.InvokeVoidAsync("alert", "Inicio de sesión fallido. Verifica tus credenciales.");
+
+            }
+        }
+        catch (Exception ex)
+        {
+            mensaje = "Error en el inicio de sesión: " + ex.Message;
+        }
+    }
+
+}

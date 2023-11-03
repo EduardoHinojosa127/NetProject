@@ -1,0 +1,369 @@
+@page "/productos/{id}"
+@inject NavigationManager NavigationManager
+@inject CookieService CookieService
+@using System.Text.Json
+@inject IJSRuntime JSRuntime
+@inject Categorias CategoriasService
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Grayscale - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets-main/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css-main/styles.css" rel="stylesheet" />
+        <style>
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .image-container {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .data-container {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .data-container label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .data-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .data-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+        .image-container {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            transition: filter 0.2s; /* Transición de filtro para el efecto de sombra */
+        }
+
+        .image-container:hover img {
+            filter: brightness(85%); /* Cambia el brillo al pasar el mouse sobre la imagen */
+        }
+
+        .edit-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centra el mensaje en el contenedor */
+            background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+    </head>
+    <body id="page-top" style="margin: 0;">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand text-black" href="/productos">Regresar</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        <header class="masthead">
+        <form @onsubmit="HandleSubmit">
+        <div class="container mt-5">
+            <div class="image-container mt-5" @onmouseover="ShowEditMessage" @onmouseout="HideEditMessage">
+                <InputFile multiple style="display: none" id="fileInput" OnChange="HandleFileUpload"/>
+                <img src="data:image/jpeg;base64,@imagen" alt="Suba su imagen" class="w-10"/>
+                @if (showEditMessage)
+                {
+                    <label for="fileInput" class="edit-message">
+                        Editar imagen
+                    </label>
+                }
+            </div>
+            <div class="data-container mt-5">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" style="background-color: transparent; border-color: #313131; color: black; border-radius: 5px;" @bind="nombre" required>
+
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" style="background-color: transparent; border-color: #313131; color: black; border-radius: 5px;" @bind="descripcion" required></textarea>
+
+                <label for="precio">Precio:</label>
+                <input type="number" step="0.01" id="precio" name="precio" style="background-color: transparent; border-color: #313131; color: black; border-radius: 5px;" @bind="precio" required>
+
+                <label for="categoria">Categoría:</label>
+                <select class="form-control" @bind="categoria" id="categoria" style="background-color: transparent; border-color: #313131; color: black;">
+                    @foreach (var categoria in CategoriasService.Categorías){
+                        <option value="@categoria">@categoria</option>
+                    }   
+                </select>
+
+                <label class="mt-2" for="stock">Stock:</label>
+                <input type="number" id="stock" name="stock" style="background-color: transparent; border-color: #313131; color: black; border-radius: 5px;" @bind="stock" required>
+                @if (id != "createProduct"){
+                    <div style="display: flex; align-items: center;">
+                        <input type="submit" class="btn btn-primary" style="border: none; margin-right: 0.5rem;" value="Guardar">
+                        <input type="button" class="btn btn-danger" style="border: none;" value="Eliminar" @onclick="Eliminar"></input>
+                    </div>
+                }
+                else{
+                    <input type="submit" class="btn btn-primary" style="border: none; margin-right: 0.5rem;" value="Guardar">
+                }
+                
+            </div>
+        </div>
+    </form>
+
+    </header>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js-main/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
+@code {
+    [Parameter]
+    public string id { get; set; }
+    private string nombre;
+    private string descripcion;
+    private decimal precio;
+    private int stock;
+    private string imagen;
+    private int? cookieValue;
+    private string categoria;
+    //private string dueño;
+    private string errorMessage;
+    private bool showEditMessage = false;
+    private string comp;
+    private string productJson;
+    private string funcion = "";
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            comp = await CookieService.ReadCookieValue(JSRuntime);
+            cookieValue = await CookieService.ReadUserCookie(JSRuntime);
+            if (id != "createProduct"){
+                await AsignInformation();
+            }
+            StateHasChanged();
+        }        
+    }
+    public async Task AsignInformation(){
+        if (cookieValue.HasValue)
+        {
+            try
+            {
+                // Aquí haces la llamada a tu API para obtener los datos del usuario
+                var client = new HttpClient();
+                var response = await client.GetAsync($"http://localhost:5086/api/productos/{id}");
+                if (response.IsSuccessStatusCode)
+                {
+                    productJson = await response.Content.ReadAsStringAsync();
+                    dynamic product = JsonSerializer.Deserialize<dynamic>(productJson);
+                    nombre = product.GetProperty("nombre").GetString();
+                    descripcion = product.GetProperty("descripcion").GetString();
+                    precio = product.GetProperty("precio").GetDecimal();
+                    stock = product.GetProperty("stock").GetInt32();
+                    imagen = product.GetProperty("imagen").GetString();
+                    categoria = product.GetProperty("categoria").GetString();
+                }
+                else
+                {
+                    errorMessage = "No se pudieron obtener los datos del producto.";
+                    Console.WriteLine(errorMessage);
+                }
+            }
+            catch (Exception ex)
+            {
+                errorMessage = "Error al obtener los datos del producto: " + ex.Message;
+                Console.WriteLine(errorMessage);
+            }
+        }
+    }
+    private void ShowEditMessage()
+    {
+        showEditMessage = true;
+    }
+
+    private async Task ActualizarDatos()
+    {
+        // Crea un objeto con los datos a actualizar
+        var datosActualizados = new {
+            id = id,
+            nombre = nombre,
+            descripcion = descripcion,
+            precio = precio,
+            stock = stock,
+            categoria = categoria,
+            imagen = imagen,
+            usuario_ID = cookieValue
+        };
+
+        var client = new HttpClient();
+        var response = await client.PutAsJsonAsync($"http://localhost:5086/api/productos/{id}", datosActualizados);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var confirm = await JSRuntime.InvokeAsync<bool>("window.confirm", "Producto actualizado exitosamente. ¿Desea ir a la página de productos?");
+            if (confirm)
+            {
+                await JSRuntime.InvokeVoidAsync("eval", "window.location.href = '/productos'");
+                Console.WriteLine("Datos actualizados exitosamente.");
+            }
+        }
+        else
+        {
+            // Maneja el error en caso de una actualización fallida
+            Console.WriteLine("Error al actualizar los datos.");
+        }
+    }
+
+    private const int tamaño = 2 * 1024 * 1024;
+    private List<string> imagenes = new List<string>();
+    private async Task HandleFileUpload(InputFileChangeEventArgs e)
+    {
+        var archivo = e.GetMultipleFiles().FirstOrDefault(); // Obtén el primer archivo seleccionado
+
+        if (archivo != null)
+        {
+            using var stream = archivo.OpenReadStream(tamaño);
+            using var ms = new MemoryStream();
+            await stream.CopyToAsync(ms);
+            imagen = $"{Convert.ToBase64String(ms.ToArray())}";
+            
+        }
+    }
+
+    private void HideEditMessage()
+    {
+        showEditMessage = false;
+    }
+    private async Task GuardarDatos()
+    {
+        int idMaximo = await ObtenerIdMaximo();
+        idMaximo = idMaximo + 1;
+
+        var datosNuevos = new {
+            id = idMaximo,
+            nombre = nombre,
+            descripcion = descripcion,
+            precio = precio,
+            stock = stock,
+            categoria = categoria,
+            imagen = imagen,
+            usuario_ID = cookieValue
+        };
+
+        var client = new HttpClient();
+        var response = await client.PostAsJsonAsync($"http://localhost:5086/api/productos/", datosNuevos);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var confirm = await JSRuntime.InvokeAsync<bool>("window.confirm", "Producto creado exitosamente. ¿Desea ir a la página de productos?");
+            if (confirm)
+            {
+                await JSRuntime.InvokeVoidAsync("eval", "window.location.href = '/productos'");
+                Console.WriteLine("Datos creados exitosamente.");
+            }
+        }
+        else
+        {
+            // Maneja el error en caso de una actualización fallida
+            Console.WriteLine("Error al guardar los datos.");
+        }
+    }
+
+    private void HandleSubmit()
+    {
+        if (id == "createProduct")
+        {
+            GuardarDatos();
+        }
+        else
+        {
+            ActualizarDatos();
+        }
+    }
+    private async Task<int> ObtenerIdMaximo()
+    {
+        try
+        {
+            var client = new HttpClient();
+            var response = await client.GetAsync("http://localhost:5086/api/productos/maxid");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+                using (JsonDocument doc = JsonDocument.Parse(json))
+                {
+                    if (doc.RootElement.TryGetProperty("id", out var idElement) && idElement.ValueKind == JsonValueKind.Number)
+                    {
+                        return idElement.GetInt32();
+                    }
+                }
+            }            
+
+            // Manejo de errores: devuelve un valor predeterminado (por ejemplo, 1) si la solicitud falla
+            return 1;
+        }
+        catch (Exception ex)
+        {
+            // Manejo de excepciones: devuelve un valor predeterminado (por ejemplo, 1) en caso de error
+            return 1;
+        }
+    }
+    private async Task Eliminar()
+    {
+        var confirm = await JSRuntime.InvokeAsync<bool>("confirm", "¿Está seguro de eliminar este producto?");
+        if (confirm){
+            var client = new HttpClient();
+            var response = await client.DeleteAsync($"http://localhost:5086/api/productos/{id}");
+
+            if (response.IsSuccessStatusCode)
+            {                
+                Console.WriteLine("Datos eliminados exitosamente.");
+                await JSRuntime.InvokeVoidAsync("eval", "window.location.href = '/productos'");
+            }
+            else
+            {
+                // Maneja el error en caso de una actualización fallida
+                Console.WriteLine("Error al eliminar los datos.");
+            }
+        }
+        
+    }
+}

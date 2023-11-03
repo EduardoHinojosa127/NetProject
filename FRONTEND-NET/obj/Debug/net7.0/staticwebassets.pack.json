@@ -1,0 +1,549 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\FRONTEND-NET.bundle.scp.css",
+      "PackagePath": "staticwebassets\\FRONTEND-NET.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\assets-main\\favicon.ico",
+      "PackagePath": "staticwebassets\\assets-main\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\assets-main\\img\\bg-masthead.jpg",
+      "PackagePath": "staticwebassets\\assets-main\\img\\bg-masthead.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\assets-main\\img\\bg-signup.jpg",
+      "PackagePath": "staticwebassets\\assets-main\\img\\bg-signup.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\assets-main\\img\\demo-image-01.jpg",
+      "PackagePath": "staticwebassets\\assets-main\\img\\demo-image-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\assets-main\\img\\demo-image-02.jpg",
+      "PackagePath": "staticwebassets\\assets-main\\img\\demo-image-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\assets-main\\img\\ipad.png",
+      "PackagePath": "staticwebassets\\assets-main\\img\\ipad.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css-main\\styles.css",
+      "PackagePath": "staticwebassets\\css-main\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\bootstrap\\_media.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\_media.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\bootstrap\\mixins\\.DS_Store",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\mixins\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\bootstrap\\mixins\\_border-radius.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\mixins\\_border-radius.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\bootstrap\\mixins\\_reset-text.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\mixins\\_reset-text.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\bootstrap\\mixins\\_screen-reader.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\mixins\\_screen-reader.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\bootstrap\\mixins\\_text-hide.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\mixins\\_text-hide.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\bootstrap\\mixins\\_visibility.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\mixins\\_visibility.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\bootstrap\\utilities\\_stretched-link.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\utilities\\_stretched-link.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\fonts\\.DS_Store",
+      "PackagePath": "staticwebassets\\fonts\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\images\\.DS_Store",
+      "PackagePath": "staticwebassets\\images\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\images\\bg.jpg",
+      "PackagePath": "staticwebassets\\images\\bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\js-main\\scripts.js",
+      "PackagePath": "staticwebassets\\js-main\\scripts.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\js\\.DS_Store",
+      "PackagePath": "staticwebassets\\js\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\js\\popper.js",
+      "PackagePath": "staticwebassets\\js\\popper.js"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\.DS_Store",
+      "PackagePath": "staticwebassets\\scss\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\.DS_Store",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_alert.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_badge.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_button-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_button-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_buttons.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_card.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_card.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_carousel.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_carousel.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_close.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_close.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_code.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_code.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_custom-forms.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_custom-forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_forms.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_functions.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_functions.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_grid.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_images.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_images.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_input-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_input-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_jumbotron.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_jumbotron.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_list-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_media.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_media.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_mixins.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_modal.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_modal.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_nav.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_nav.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_navbar.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_pagination.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_popover.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_popover.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_print.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_print.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_progress.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_reboot.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_root.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_root.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_spinners.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_spinners.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_tables.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_toasts.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_toasts.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_tooltip.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_transitions.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_transitions.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_type.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_type.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_utilities.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\_variables.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_background-variant.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_background-variant.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_badge.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_float.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_float.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_grid-framework.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_grid-framework.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_hover.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_hover.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_image.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_nav-divider.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_nav-divider.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_screen-reader.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_screen-reader.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_size.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_size.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_table-row.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_table-row.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_text-emphasis.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_text-emphasis.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_text-hide.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_text-hide.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\mixins\\_visibility.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\mixins\\_visibility.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\utilities\\_align.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_align.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\utilities\\_background.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_background.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\utilities\\_borders.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_borders.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\utilities\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\utilities\\_display.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_display.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\utilities\\_embed.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_embed.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\utilities\\_flex.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_flex.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\utilities\\_float.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_float.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\utilities\\_overflow.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_overflow.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\utilities\\_position.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_position.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\utilities\\_screenreaders.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_screenreaders.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\utilities\\_shadows.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_shadows.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\utilities\\_sizing.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_sizing.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\utilities\\_spacing.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_spacing.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\utilities\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_stretched-link.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\utilities\\_text.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_text.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\utilities\\_visibility.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\utilities\\_visibility.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\bootstrap\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "C:\\Users\\USER\\Desktop\\Proyecto-NET\\FRONTEND-NET\\wwwroot\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\scss\\style.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.FRONTEND-NET.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.FRONTEND-NET.props",
+      "PackagePath": "build\\FRONTEND-NET.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.FRONTEND-NET.props",
+      "PackagePath": "buildMultiTargeting\\FRONTEND-NET.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.FRONTEND-NET.props",
+      "PackagePath": "buildTransitive\\FRONTEND-NET.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
